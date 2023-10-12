@@ -9,7 +9,8 @@
       "openInCenter": true,
       "zoomLevel": 1,
       "forceIframe": false,
-      "customCss": ""
+      "customCss": "",
+      "customJs": ""
     },
     {
       "url": "https://keep.google.com",
@@ -20,7 +21,8 @@
       "openInCenter": false,
       "zoomLevel": 1,
       "forceIframe": false,
-      "customCss": "/* hide the menu bar and the \"Keep\" text */\nhtml > body > div:nth-child(2) > div:nth-child(2) > div:first-child, \nhtml > body > div:first-child > header:first-child > div > div:first-child > div > div:first-child > a:first-child > span { \n\tdisplay: none !important; \n}"
+      "customCss": "/* hide the menu bar and the \"Keep\" text */\nhtml > body > div:nth-child(2) > div:nth-child(2) > div:first-child, \nhtml > body > div:first-child > header:first-child > div > div:first-child > div > div:first-child > a:first-child > span { \n\tdisplay: none !important; \n}",
+      "customJs": ""
     },
     {
       "url": "https://calendar.google.com/calendar",
@@ -31,7 +33,8 @@
       "openInCenter": true,
       "zoomLevel": 1,
       "forceIframe": false,
-      "customCss": "/* hide the menu bar, \"Keep\" text, and logo */\nhtml > body > div:nth-child(2) > div:nth-child(2) > div:first-child[class*=\" \"],\nhtml > body > div:first-child > header:first-child > div > div:first-child > div > div:first-child,\nhtml > body > div:nth-child(2) > div:nth-child(2) > div:first-child > div:first-child {\ndisplay: none !important;\n}"
+      "customCss": "/* hide the menu bar, \"Keep\" text, and logo */\nhtml > body > div:nth-child(2) > div:nth-child(2) > div:first-child[class*=\" \"],\nhtml > body > div:first-child > header:first-child > div > div:first-child > div > div:first-child,\nhtml > body > div:nth-child(2) > div:nth-child(2) > div:first-child > div:first-child {\ndisplay: none !important;\n}",
+      "customJs": ""
     },
     {
       "url": "https://scholar.google.com",
@@ -42,7 +45,8 @@
       "openInCenter": false,
       "zoomLevel": 1,
       "forceIframe": false,
-      "customCss": ""
+      "customCss": "",
+      "customJs": ""
     }
   ],
   "padding": 5
