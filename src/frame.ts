@@ -6,6 +6,7 @@ export class CustomFrame {
     private readonly settings: CustomFramesSettings;
     private readonly data: CustomFrameSettings;
     private frame: HTMLIFrameElement | any;
+    private cssProps: string = '';
 
     constructor(settings: CustomFramesSettings, data: CustomFrameSettings) {
         this.settings = settings;
@@ -24,6 +25,7 @@ export class CustomFrame {
             this.frame.addEventListener("dom-ready", () => {
                 this.frame.setZoomFactor(this.data.zoomLevel);
                 this.frame.insertCSS(this.data.customCss);
+                this.frame.insertCSS(this.inheritCss(this.frame,'--canvas-color'))
                 this.frame.executeJavaScript(this.data.customJs)
             });
             this.frame.addEventListener("destroyed", () => {
@@ -105,5 +107,20 @@ export class CustomFrame {
         } else {
             this.frame.focus();
         }
+    }
+
+    inheritCss(element: HTMLElement, varName: string): string {
+        
+        element.style.setProperty(varName, 'inherit');
+        const varValue = getComputedStyle(element).getPropertyValue(varName).trim();
+        element.style.removeProperty(varName);
+        const prop = `${varName}: ${varValue};`;
+    
+        const newProp: string = prop;
+
+        this.cssProps += newProp + '\n';
+        const root = `:root {\n${this.cssProps}}`;
+    
+        return root;
     }
 }
